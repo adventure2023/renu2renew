@@ -35,7 +35,7 @@
             padding: 20px;
         }
         #home {
-            display: block;
+            display: block; /* Default visible section */
             background-image: url('flyer.jpg'); /* Path to your background image */
             background-size: contain; /* Ensures the image fits within the viewport */
             background-position: center; /* Centers the image */
@@ -47,21 +47,17 @@
             justify-content: center;
             align-items: center;
         }
-        #home h1 {
-            margin: 0;
-        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#home" onclick="showSection('home')">About Me</a>
-        <a href="#community" onclick="showSection('community')">Community Pursuits</a>
-        <a href="#more" onclick="showSection('more')">More - in Pictures</a>
+        <a href="javascript:void(0);" onclick="showSection('home')">About</a>
+        <a href="javascript:void(0);" onclick="showSection('community')">Community Pursuits</a>
+        <a href="javascript:void(0);" onclick="showSection('more')">More - in Pictures</a>
     </nav>
 
     <div id="home" class="section">
-        <h1>Vote for Renu</h1>
-        <p>Newark City Council</p>
+        <!-- Default home page content with flyer.jpg -->
     </div>
 
     <div id="community" class="section">
@@ -70,17 +66,24 @@
     </div>
 
     <div id="more" class="section">
-        <h1> More - in Pictures</h1>
+        <h1>More - in Pictures</h1>
         <p>Information about my background, experience, and vision will go here.</p>
     </div>
 
     <script>
         function showSection(sectionId) {
+            // Hide all sections
             document.querySelectorAll('.section').forEach(section => {
                 section.style.display = 'none';
             });
+            // Show the selected section
             document.getElementById(sectionId).style.display = 'block';
         }
+
+        // Set the default section to home (flyer.jpg) when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
     </script>
 </body>
 </html>
