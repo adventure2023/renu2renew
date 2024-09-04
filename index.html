@@ -10,26 +10,77 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: hidden;
+            font-family: Arial, sans-serif;
         }
         body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        #home {
+            display: block;
             background-image: url('flyer.jpg'); /* Path to your background image */
             background-size: contain; /* Ensures the image fits within the viewport */
             background-position: center; /* Centers the image */
             background-repeat: no-repeat; /* Prevents the image from repeating */
+            height: calc(100vh - 50px); /* Adjust height to fill the screen minus the nav bar */
+            color: white;
+            text-align: center;
             display: flex;
-            justify-content: center; /* Centers content horizontally */
-            align-items: center; /* Centers content vertically */
-            text-align: center; /* Centers text within the body */
-            color: white; /* Optional: Adjust text color for better contrast */
+            justify-content: center;
+            align-items: center;
         }
-        h1, p {
+        #home h1 {
             margin: 0;
         }
     </style>
 </head>
 <body>
-    <div>
+    <nav>
+        <a href="#home" onclick="showSection('home')">Home</a>
+        <a href="#community" onclick="showSection('community')">Community Pursuits</a>
+        <a href="#about" onclick="showSection('about')">More About Me</a>
+    </nav>
+
+    <div id="home" class="section">
+        <h1>Vote for Renu</h1>
+        <p>Newark City Council</p>
     </div>
+
+    <div id="community" class="section">
+        <h1>Community Pursuits</h1>
+        <p>Details about community projects and initiatives will go here.</p>
+    </div>
+
+    <div id="about" class="section">
+        <h1>More About Me</h1>
+        <p>Information about your background, experience, and vision will go here.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
