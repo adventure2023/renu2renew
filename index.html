@@ -51,15 +51,19 @@
             list-style-type: disc;
             margin-left: 20px;
         }
-        #passion .images {
+        #passion .images-container {
+            height: calc(100vh - 300px); /* Adjust based on the height of text and padding */
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
-            margin-top: 20px;
+            overflow: hidden; /* Ensure no overflow outside of viewport */
         }
-        #passion .images img {
+        #passion .images-container img {
             width: 45%;
-            height: auto;
+            height: 100%;
+            object-fit: cover; /* Ensures the image scales nicely */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
@@ -90,10 +94,10 @@
             <li><strong>Active and Involved Parent working alongside School administration:</strong> Play an active role in my children's education by participating in school activities and supporting the school administration. 
                 <br><br>Facilitate interactions with national/international level external programs such as Mathematical Olympiads for Elementary and Middle Schools (MOEMs) and Math Counts, enhancing students' learning opportunities and academic achievements.</li>
             <br>
-            <li><strong>Senior Activites Facilitator at ICC, Milpitas:</strong> Foster an environment for seniors who are looking to create new bonds in a new country into the mainstream - via the social and cultural norms they are comfortable with.</li>
+            <li><strong>Senior Activities Facilitator at ICC, Milpitas:</strong> Foster an environment for seniors who are looking to create new bonds in a new country into the mainstream - via the social and cultural norms they are comfortable with.</li>
             <br>
         </ul>
-        <div class="images">
+        <div class="images-container">
             <img src="GS1.jpeg" alt="Girl Scouts activity">
             <img src="GS2.jpeg" alt="Girl Scouts event">
         </div>
