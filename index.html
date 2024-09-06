@@ -30,6 +30,32 @@
         nav a:hover {
             text-decoration: underline;
         }
+        /* Dropdown menu styles */
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #575757;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .section {
             display: none;
             padding: 20px;
@@ -72,7 +98,15 @@
 <body>
     <nav>
         <a href="javascript:void(0);" onclick="showSection('home')">Home</a>
-        <a href="javascript:void(0);" onclick="showSection('more')">More - About Me</a>
+        <div class="dropdown">
+            <a href="javascript:void(0);">More - About Me</a>
+            <div class="dropdown-content">
+                <a href="javascript:void(0);" onclick="showSection('family')">My Family</a>
+                <a href="javascript:void(0);" onclick="showSection('professional')">Professional Background</a>
+                <a href="javascript:void(0);" onclick="showSection('vision')">Vision for Newark</a>
+                <a href="javascript:void(0);" onclick="showSection('defines')">What Defines Me</a>
+            </div>
+        </div>
         <a href="javascript:void(0);" onclick="showSection('passion')">Passion Projects</a>
     </nav>
 
@@ -104,9 +138,25 @@
         </div>
     </div>
 
-    <div id="more" class="section">
-        <h1>More - About Me</h1>
-        <p>Information about my background, experience, and vision will go here.</p>
+    <!-- New sections for sub-menu -->
+    <div id="family" class="section">
+        <h1>My Family</h1>
+        <p>Details about your family will go here.</p>
+    </div>
+
+    <div id="professional" class="section">
+        <h1>Professional Background</h1>
+        <p>Details about your professional background will go here.</p>
+    </div>
+
+    <div id="vision" class="section">
+        <h1>Vision for Newark</h1>
+        <p>Your vision for Newark will go here.</p>
+    </div>
+
+    <div id="defines" class="section">
+        <h1>What Defines Me</h1>
+        <p>Details about what defines you will go here.</p>
     </div>
 
     <script>
