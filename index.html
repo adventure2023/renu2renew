@@ -109,14 +109,15 @@
 
         /* New family section styles */
         #family {
-            display: flex;
+            display: block;
             justify-content: center;
             align-items: center;
             height: calc(100vh - 50px); /* Full screen minus nav height */
             background-image: url('family.jpeg'); /* Add family.jpeg */
-            background-size: cover; /* Make sure the image covers the whole screen */
+            background-size: contain; /* Make sure the image is contained in the whole screen */
             background-position: center;
             background-repeat: no-repeat;
+            align-items: center;
         }
     </style>
 </head>
