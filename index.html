@@ -95,19 +95,20 @@
 
         
         #vision {
+            display: block; /* Default visible section */
+            background-image: url('vision.jpg'); /* Path to my background image */
+            background-size: contain; /* Ensures the image fits within the viewport */
+            background-position: center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+            height: calc(100vh - 50px); /* Adjust height to fill the screen minus the nav bar */
+            color: white;
+            text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 50px); /* Full screen minus the height of the navbar */
-            background-color: #f4f4f4;
         }
 
-        .vision-image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Ensures the image scales nicely and maintains its aspect ratio */
-            display: block;
-        }
+       
     </style>
 </head>
 <body>
@@ -171,8 +172,8 @@
     </div>
 
     <div id="vision" class="section">
-        <div class="vision-image-container">
-            <img src="vision.jpg" alt="Vision for Newark">
+        <div class="vision">
+            
         </div>
     </div>
 
