@@ -68,9 +68,18 @@
             height: calc(100vh - 50px);
             color: white;
             text-align: center;
+            align-items: center;
+
+            /* Align content horizontally in the center */
             display: flex;
             justify-content: center;
-            align-items: center;
+        
+            /* Ensure the element is at the top */
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;            
         }
 
         #vision {
