@@ -60,28 +60,13 @@
             padding: 20px;
         }
         #home {
-            display: block;
-            background-image: url('images/flyer_portrait.jpg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
             height: calc(100vh - 50px);
-            color: white;
-            text-align: center;
-            align-items: center;
-
-            /* Align content horizontally in the center */
             display: flex;
             justify-content: center;
+            align-items: flex-start; /* Align image at the top */
+            padding-top: 10px; /* Optional: Adds some space from the top */
+            text-align: center; /* Center the image horizontally */        }
         
-            /* Ensure the element is at the top */
-            position: absolute;
-            top: 50;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;            
-        }
-
         #vision {
             display: block;
             background-image: url('images/vision_portrait.jpg');
@@ -172,6 +157,11 @@
                 margin-left: 10px; /* Adjust spacing for mobile */
             }
         }
+        .responsive-img {
+            max-width: 100%; /* Ensure image doesn't overflow horizontally */
+            height: auto;    /* Maintain aspect ratio */
+            object-fit: contain; /* Makes sure the image fits nicely */
+        }        
     </style>
 </head>
 <body>
@@ -190,6 +180,7 @@
     </nav>
 
     <div id="home" class="section">
+        <img src="images/flyer_portrait.jpg" alt="Flyer" class="responsive-img">
         <!-- Default home page content with flyer.jpg -->
     </div>
 
