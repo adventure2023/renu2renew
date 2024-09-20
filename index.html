@@ -68,17 +68,12 @@
             text-align: center; /* Center the image horizontally */        }
         
         #vision {
-            display: block;
-            background-image: url('images/vision_portrait.jpg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            color: white;
-            text-align: center;
+            height: calc(100vh - 50px);
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align image at the top */
+            padding-top: 10px; /* Optional: Adds some space from the top */
+            text-align: center; /* Center the image horizontally */        
         }
         
         #passion ul {
@@ -101,29 +96,23 @@
         }
 
         #defines {
-            display: block;
-            background-image: url('images/values_portrait.jpg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            color: white;
-            text-align: center;
+            height: calc(100vh - 50px);
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Align image at the top */
+            padding-top: 10px; /* Optional: Adds some space from the top */
+            text-align: center; /* Center the image horizontally */        
         }
 
         #family {
-            display: block;
-            justify-content: center;
-            align-items: center;
             height: calc(100vh - 50px);
-            background-image: url('images/family.jpeg');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align image at the top */
+            padding-top: 10px; /* Optional: Adds some space from the top */
+            text-align: center; /* Center the image horizontally */        
         }
+
         #professional .images-container {
             display: flex;
             justify-content: center;
@@ -181,7 +170,6 @@
 
     <div id="home" class="section">
         <img src="images/flyer_portrait.jpg" alt="Flyer" class="responsive-img">
-        <!-- Default home page content with flyer.jpg -->
     </div>
 
     <div id="passion" class="section">
@@ -209,7 +197,7 @@
     </div>
 
     <div id="family" class="section">
-        <!-- My Family image section -->
+        <img src="images/family.jpeg" alt="Renu's Family" class="responsive-img">
     </div>
 
     <div id="professional" class="section">
@@ -229,13 +217,11 @@
     </div>
 
     <div id="defines" class="section">
-        <div class="defines">
-        </div>
+        <img src="images/values_portrait.jpg" alt="Renu's Values" class="responsive-img">
     </div>
 
     <div id="vision" class="section">
-        <div class="vision">            
-        </div>
+        <img src="images/vision_portrait.jpg" alt="Vision for Newark" class="responsive-img">
     </div>
 
     <script>
