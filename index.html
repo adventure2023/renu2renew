@@ -75,6 +75,18 @@
             padding-top: 10px; /* Optional: Adds some space from the top */
             text-align: center; /* Center the image horizontally */        
         }
+
+        #events ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        #events .images-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
         
         #passion ul {
             list-style-type: disc;
@@ -165,7 +177,8 @@
                 <a href="javascript:void(0);" onclick="showSection('professional')">Professional Background</a>
                 <a href="javascript:void(0);" onclick="showSection('passion')">Passion Projects</a>    
             </div>
-        </div>     
+        </div>
+        <a href="javascript:void(0);" onclick="showSection('events')">Events/ Channels</a>
     </nav>
 
     <div id="home" class="section">
